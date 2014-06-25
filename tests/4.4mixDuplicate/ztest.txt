@@ -1,0 +1,40 @@
+//8 bit ver
+var S = 0;
+var O = 0;
+
+var SMax = 256;
+var OMax = 256;
+
+var STemp = 0;
+var OTemp = 0;
+var OCounter = 0;
+var temp1 = 0;
+var temp2 = 0;
+
+while(O != OMax){
+	S = 0;
+	while(S != SMax){
+		//code start
+		OTemp = 0;
+		STemp = S;
+		
+		//O = ((S>>4)^S)&0xf;
+		temp1 = STemp >> 4;
+		temp2 = temp1 ^ STemp;
+		OTemp = temp2 & 15;
+		temp1 = OTemp << 4;
+		OTemp = OTemp | temp1;
+
+
+		//code end
+		if(O == OTemp){
+			OCounter = OCounter + 1;
+			goto break;
+		}
+		S = S + 1;
+	}
+	break : O = O + 1;
+}
+if(OCounter == 16){
+	reach: 0>1;
+}

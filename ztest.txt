@@ -1,0 +1,34 @@
+//BDD: longbman
+var S = 0;
+var O = 0;
+
+var SMax = 16;
+var OMax = 16;
+
+var STemp = 0;
+var OTemp = 0;
+var OCounter = 0;
+
+while(O != OMax){
+	S = 0;
+	while(S != SMax){
+		//code start
+		OTemp = 0;
+		STemp = S;
+		while(STemp >= 5){
+			STemp = STemp - 5;
+			OTemp = OTemp + 1;
+		}
+		//code end
+		if(O == OTemp){
+			OCounter = OCounter + 1;
+			goto break;
+		}
+		S = S + 1;
+	}
+	break : O = O + 1;
+}
+
+if(OCounter == 4){
+	reach: 0>1;
+}

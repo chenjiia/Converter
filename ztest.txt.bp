@@ -1,0 +1,266 @@
+
+bool<5> and(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+return left4&right4,left3&right3,left2&right2,left1&right1,left0&right0;
+end
+
+bool<5> or(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+return left4|right4,left3|right3,left2|right2,left1|right1,left0|right0;
+end
+
+bool<5> oneComplement(x4,x3,x2,x1,x0)
+begin
+return 0,~x3,~x2,~x1,~x0;
+end
+
+bool<5> xor(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+return left4^right4,left3^right3,left2^right2,left1^right1,left0^right0;
+end
+
+bool<5> rShiftOne(x4,x3,x2,x1,x0)
+begin
+return 0,x4,x3,x2,x1;
+end
+
+bool<5> lShiftOne(x4,x3,x2,x1,x0)
+begin
+return x3,x2,x1,x0,0;
+end
+
+bool isGT(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+if (left4 != right4) then
+if (left4 = 1) then
+return 1;
+fi
+else 
+if (left3 != right3) then
+if (left3 = 1) then
+return 1;
+fi
+else 
+if (left2 != right2) then
+if (left2 = 1) then
+return 1;
+fi
+else 
+if (left1 != right1) then
+if (left1 = 1) then
+return 1;
+fi
+else 
+if (left0 != right0) then
+if (left0 = 1) then
+return 1;
+fi
+fi
+fi
+fi
+fi
+fi
+return 0;
+end
+
+bool isLT(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+if (left4 != right4) then
+if (right4 = 1) then
+return 1;
+fi
+else 
+if (left3 != right3) then
+if (right3 = 1) then
+return 1;
+fi
+else 
+if (left2 != right2) then
+if (right2 = 1) then
+return 1;
+fi
+else 
+if (left1 != right1) then
+if (right1 = 1) then
+return 1;
+fi
+else 
+if (left0 != right0) then
+if (right0 = 1) then
+return 1;
+fi
+fi
+fi
+fi
+fi
+fi
+return 0;
+end
+
+bool isEqual(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+if (left4 = right4 & left3 = right3 & left2 = right2 & left1 = right1 & left0 = right0) then
+return 1;
+else 
+return 0;
+fi
+end
+
+bool isNotEqual(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+if (left4 != right4 | left3 != right3 | left2 != right2 | left1 != right1 | left0 != right0) then
+return 1;
+else 
+return 0;
+fi
+end
+
+bool isGTEQ(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+decl eq, gt;
+eq := isEqual (left4,left3,left2,left1,left0,right4,right3,right2,right1,right0);
+gt := isGT (left4,left3,left2,left1,left0,right4,right3,right2,right1,right0);
+return eq | gt;
+end
+
+bool isLTEQ(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+decl eq, lt;
+eq := isEqual (left4,left3,left2,left1,left0,right4,right3,right2,right1,right0);
+lt := isLT (left4,left3,left2,left1,left0,right4,right3,right2,right1,right0);
+return eq | lt;
+end
+
+bool<5> inc(x4,x3,x2,x1,x0)
+begin
+if (x0 = 0) then
+return x4,x3,x2,x1,1;
+else 
+if (x1 = 0) then
+return x4,x3,x2,1,0;
+else 
+if (x2 = 0) then
+return x4,x3,1,0,0;
+else 
+if (x3 = 0) then
+return x4,1,0,0,0;
+else 
+return 1,0,0,0,0;
+fi
+fi
+fi
+fi
+end
+
+bool<5> dec(x4,x3,x2,x1,x0)
+begin
+if (x0 = 1) then
+return x4,x3,x2,x1,0;
+else 
+if (x1 = 1) then
+return x4,x3,x2,0,1;
+else 
+if (x2 = 1) then
+return x4,x3,0,1,1;
+else 
+if (x3 = 1) then
+return x4,0,1,1,1;
+else 
+return 0,1,1,1,1;
+fi
+fi
+fi
+fi
+end
+
+bool<5> plus(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+while (returnTemp) do
+left4,left3,left2,left1,left0 := inc (left4,left3,left2,left1,left0);
+right4,right3,right2,right1,right0 := dec (right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+od
+return left4,left3,left2,left1,left0;
+end
+
+bool<5> minus(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+while (returnTemp) do
+left4,left3,left2,left1,left0 := dec (left4,left3,left2,left1,left0);
+right4,right3,right2,right1,right0 := dec (right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+od
+return left4,left3,left2,left1,left0;
+end
+
+bool<5> lShift(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+while (returnTemp) do
+left4,left3,left2,left1,left0 := lShiftOne (left4,left3,left2,left1,left0);
+right4,right3,right2,right1,right0 := dec (right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+od
+return left4,left3,left2,left1,left0;
+end
+
+bool<5> rShift(left4,left3,left2,left1,left0,right4,right3,right2,right1,right0)
+begin
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+while (returnTemp) do
+left4,left3,left2,left1,left0 := rShiftOne (left4,left3,left2,left1,left0);
+right4,right3,right2,right1,right0 := dec (right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (right4,right3,right2,right1,right0,0,0,0,0,0);
+od
+return left4,left3,left2,left1,left0;
+end
+
+void main()
+begin
+decl returnTemp;
+decl S4,S3,S2,S1,S0;
+decl O4,O3,O2,O1,O0;
+decl SMax4,SMax3,SMax2,SMax1,SMax0;
+decl OMax4,OMax3,OMax2,OMax1,OMax0;
+decl STemp4,STemp3,STemp2,STemp1,STemp0;
+decl OTemp4,OTemp3,OTemp2,OTemp1,OTemp0;
+decl OCounter4,OCounter3,OCounter2,OCounter1,OCounter0;
+returnTemp := 0;
+S4,S3,S2,S1,S0 := 0,0,0,0,0;
+O4,O3,O2,O1,O0 := 0,0,0,0,0;
+SMax4,SMax3,SMax2,SMax1,SMax0 := 1,0,0,0,0;
+OMax4,OMax3,OMax2,OMax1,OMax0 := 1,0,0,0,0;
+STemp4,STemp3,STemp2,STemp1,STemp0 := 0,0,0,0,0;
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0;
+OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := 0,0,0,0,0;
+returnTemp := isNotEqual(O4,O3,O2,O1,O0,OMax4,OMax3,OMax2,OMax1,OMax0);
+while (returnTemp) do
+S4,S3,S2,S1,S0 := 0,0,0,0,0;
+returnTemp := isNotEqual(S4,S3,S2,S1,S0,SMax4,SMax3,SMax2,SMax1,SMax0);
+while (returnTemp) do
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0;
+STemp4,STemp3,STemp2,STemp1,STemp0 := S4,S3,S2,S1,S0;
+returnTemp := isGTEQ(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+while (returnTemp) do
+STemp4,STemp3,STemp2,STemp1,STemp0 := minus(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := plus(OTemp4,OTemp3,OTemp2,OTemp1,OTemp0,0,0,0,0,1);
+returnTemp := isGTEQ(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+od
+returnTemp := isEqual(O4,O3,O2,O1,O0,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0);
+if (returnTemp) then
+OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := plus(OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,0,0,1);
+goto break;
+fi
+S4,S3,S2,S1,S0 := plus(S4,S3,S2,S1,S0,0,0,0,0,1);
+returnTemp := isNotEqual(S4,S3,S2,S1,S0,SMax4,SMax3,SMax2,SMax1,SMax0);
+od
+break: O4,O3,O2,O1,O0 := plus(O4,O3,O2,O1,O0,0,0,0,0,1);
+returnTemp := isNotEqual(O4,O3,O2,O1,O0,OMax4,OMax3,OMax2,OMax1,OMax0);
+od
+returnTemp := isEqual(OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,1,0,0);
+if (returnTemp) then
+reach: isGT(0,0,0,0,0,0,0,0,0,1);
+fi
+end

@@ -1,0 +1,37 @@
+var S = 0;
+var O = 0;
+
+var SMax = 128;
+var OMax = 128;
+
+var STemp = 0;
+var OTemp = 0;
+var OCounter = 0;
+
+var base = 4;
+
+while(O != OMax){
+	S = 0;
+	while(S != SMax){
+		//code start
+		OTemp = 0;
+		STemp = S;
+		if(STemp < 16){
+			OTemp = base+ STemp;
+		}
+		else{
+			OTemp = base;
+		}
+		//code end
+		if(O == OTemp){
+			OCounter = OCounter + 1;
+			goto break;
+		}
+		S = S + 1;
+	}
+	break : O = O + 1;
+}
+
+if(OCounter == 16){
+	reach: 0>1;
+}

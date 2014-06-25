@@ -1,0 +1,47 @@
+void main()
+begin
+decl returnTemp;
+decl S4,S3,S2,S1,S0;
+decl O4,O3,O2,O1,O0;
+decl SMax4,SMax3,SMax2,SMax1,SMax0;
+decl OMax4,OMax3,OMax2,OMax1,OMax0;
+decl STemp4,STemp3,STemp2,STemp1,STemp0;
+decl OTemp4,OTemp3,OTemp2,OTemp1,OTemp0;
+decl OCounter4,OCounter3,OCounter2,OCounter1,OCounter0;
+returnTemp := 0;
+S4,S3,S2,S1,S0 := 0,0,0,0,0;
+O4,O3,O2,O1,O0 := 0,0,0,0,0;
+SMax4,SMax3,SMax2,SMax1,SMax0 := 1,0,0,0,0;
+OMax4,OMax3,OMax2,OMax1,OMax0 := 1,0,0,0,0;
+STemp4,STemp3,STemp2,STemp1,STemp0 := 0,0,0,0,0;
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0;
+OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := 0,0,0,0,0;
+returnTemp := isNotEqual(O4,O3,O2,O1,O0,OMax4,OMax3,OMax2,OMax1,OMax0);
+while (returnTemp) do
+S4,S3,S2,S1,S0 := 0,0,0,0,0;
+returnTemp := isNotEqual(S4,S3,S2,S1,S0,SMax4,SMax3,SMax2,SMax1,SMax0);
+while (returnTemp) do
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0;
+STemp4,STemp3,STemp2,STemp1,STemp0 := S4,S3,S2,S1,S0;
+returnTemp := isGTEQ(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+while (returnTemp) do
+STemp4,STemp3,STemp2,STemp1,STemp0 := minus(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := plus(OTemp4,OTemp3,OTemp2,OTemp1,OTemp0,0,0,0,0,1);
+returnTemp := isGTEQ(STemp4,STemp3,STemp2,STemp1,STemp0,0,0,1,0,1);
+od
+returnTemp := isEqual(O4,O3,O2,O1,O0,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0);
+if (returnTemp) then
+OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := plus(OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,0,0,1);
+goto break;
+fi
+S4,S3,S2,S1,S0 := plus(S4,S3,S2,S1,S0,0,0,0,0,1);
+returnTemp := isNotEqual(S4,S3,S2,S1,S0,SMax4,SMax3,SMax2,SMax1,SMax0);
+od
+break: O4,O3,O2,O1,O0 := plus(O4,O3,O2,O1,O0,0,0,0,0,1);
+returnTemp := isNotEqual(O4,O3,O2,O1,O0,OMax4,OMax3,OMax2,OMax1,OMax0);
+od
+returnTemp := isEqual(OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,1,0,0);
+if (returnTemp) then
+reach: 0,0,0,0,0;
+fi
+end

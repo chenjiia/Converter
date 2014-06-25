@@ -1,0 +1,808 @@
+
+bool<33> and(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+return left32&right32,left31&right31,left30&right30,left29&right29,left28&right28,left27&right27,left26&right26,left25&right25,left24&right24,left23&right23,left22&right22,left21&right21,left20&right20,left19&right19,left18&right18,left17&right17,left16&right16,left15&right15,left14&right14,left13&right13,left12&right12,left11&right11,left10&right10,left9&right9,left8&right8,left7&right7,left6&right6,left5&right5,left4&right4,left3&right3,left2&right2,left1&right1,left0&right0;
+end
+
+bool<33> or(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+return left32|right32,left31|right31,left30|right30,left29|right29,left28|right28,left27|right27,left26|right26,left25|right25,left24|right24,left23|right23,left22|right22,left21|right21,left20|right20,left19|right19,left18|right18,left17|right17,left16|right16,left15|right15,left14|right14,left13|right13,left12|right12,left11|right11,left10|right10,left9|right9,left8|right8,left7|right7,left6|right6,left5|right5,left4|right4,left3|right3,left2|right2,left1|right1,left0|right0;
+end
+
+bool<33> oneComplement(x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0)
+begin
+return 0,~x31,~x30,~x29,~x28,~x27,~x26,~x25,~x24,~x23,~x22,~x21,~x20,~x19,~x18,~x17,~x16,~x15,~x14,~x13,~x12,~x11,~x10,~x9,~x8,~x7,~x6,~x5,~x4,~x3,~x2,~x1,~x0;
+end
+
+bool<33> xor(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+return left32^right32,left31^right31,left30^right30,left29^right29,left28^right28,left27^right27,left26^right26,left25^right25,left24^right24,left23^right23,left22^right22,left21^right21,left20^right20,left19^right19,left18^right18,left17^right17,left16^right16,left15^right15,left14^right14,left13^right13,left12^right12,left11^right11,left10^right10,left9^right9,left8^right8,left7^right7,left6^right6,left5^right5,left4^right4,left3^right3,left2^right2,left1^right1,left0^right0;
+end
+
+bool<33> rShiftOne(x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0)
+begin
+return 0,x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1;
+end
+
+bool<33> lShiftOne(x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0)
+begin
+return x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0,0;
+end
+
+bool isGT(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+if (left32 != right32) then
+if (left32 = 1) then
+return 1;
+fi
+else 
+if (left31 != right31) then
+if (left31 = 1) then
+return 1;
+fi
+else 
+if (left30 != right30) then
+if (left30 = 1) then
+return 1;
+fi
+else 
+if (left29 != right29) then
+if (left29 = 1) then
+return 1;
+fi
+else 
+if (left28 != right28) then
+if (left28 = 1) then
+return 1;
+fi
+else 
+if (left27 != right27) then
+if (left27 = 1) then
+return 1;
+fi
+else 
+if (left26 != right26) then
+if (left26 = 1) then
+return 1;
+fi
+else 
+if (left25 != right25) then
+if (left25 = 1) then
+return 1;
+fi
+else 
+if (left24 != right24) then
+if (left24 = 1) then
+return 1;
+fi
+else 
+if (left23 != right23) then
+if (left23 = 1) then
+return 1;
+fi
+else 
+if (left22 != right22) then
+if (left22 = 1) then
+return 1;
+fi
+else 
+if (left21 != right21) then
+if (left21 = 1) then
+return 1;
+fi
+else 
+if (left20 != right20) then
+if (left20 = 1) then
+return 1;
+fi
+else 
+if (left19 != right19) then
+if (left19 = 1) then
+return 1;
+fi
+else 
+if (left18 != right18) then
+if (left18 = 1) then
+return 1;
+fi
+else 
+if (left17 != right17) then
+if (left17 = 1) then
+return 1;
+fi
+else 
+if (left16 != right16) then
+if (left16 = 1) then
+return 1;
+fi
+else 
+if (left15 != right15) then
+if (left15 = 1) then
+return 1;
+fi
+else 
+if (left14 != right14) then
+if (left14 = 1) then
+return 1;
+fi
+else 
+if (left13 != right13) then
+if (left13 = 1) then
+return 1;
+fi
+else 
+if (left12 != right12) then
+if (left12 = 1) then
+return 1;
+fi
+else 
+if (left11 != right11) then
+if (left11 = 1) then
+return 1;
+fi
+else 
+if (left10 != right10) then
+if (left10 = 1) then
+return 1;
+fi
+else 
+if (left9 != right9) then
+if (left9 = 1) then
+return 1;
+fi
+else 
+if (left8 != right8) then
+if (left8 = 1) then
+return 1;
+fi
+else 
+if (left7 != right7) then
+if (left7 = 1) then
+return 1;
+fi
+else 
+if (left6 != right6) then
+if (left6 = 1) then
+return 1;
+fi
+else 
+if (left5 != right5) then
+if (left5 = 1) then
+return 1;
+fi
+else 
+if (left4 != right4) then
+if (left4 = 1) then
+return 1;
+fi
+else 
+if (left3 != right3) then
+if (left3 = 1) then
+return 1;
+fi
+else 
+if (left2 != right2) then
+if (left2 = 1) then
+return 1;
+fi
+else 
+if (left1 != right1) then
+if (left1 = 1) then
+return 1;
+fi
+else 
+if (left0 != right0) then
+if (left0 = 1) then
+return 1;
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+return 0;
+end
+
+bool isLT(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+if (left32 != right32) then
+if (right32 = 1) then
+return 1;
+fi
+else 
+if (left31 != right31) then
+if (right31 = 1) then
+return 1;
+fi
+else 
+if (left30 != right30) then
+if (right30 = 1) then
+return 1;
+fi
+else 
+if (left29 != right29) then
+if (right29 = 1) then
+return 1;
+fi
+else 
+if (left28 != right28) then
+if (right28 = 1) then
+return 1;
+fi
+else 
+if (left27 != right27) then
+if (right27 = 1) then
+return 1;
+fi
+else 
+if (left26 != right26) then
+if (right26 = 1) then
+return 1;
+fi
+else 
+if (left25 != right25) then
+if (right25 = 1) then
+return 1;
+fi
+else 
+if (left24 != right24) then
+if (right24 = 1) then
+return 1;
+fi
+else 
+if (left23 != right23) then
+if (right23 = 1) then
+return 1;
+fi
+else 
+if (left22 != right22) then
+if (right22 = 1) then
+return 1;
+fi
+else 
+if (left21 != right21) then
+if (right21 = 1) then
+return 1;
+fi
+else 
+if (left20 != right20) then
+if (right20 = 1) then
+return 1;
+fi
+else 
+if (left19 != right19) then
+if (right19 = 1) then
+return 1;
+fi
+else 
+if (left18 != right18) then
+if (right18 = 1) then
+return 1;
+fi
+else 
+if (left17 != right17) then
+if (right17 = 1) then
+return 1;
+fi
+else 
+if (left16 != right16) then
+if (right16 = 1) then
+return 1;
+fi
+else 
+if (left15 != right15) then
+if (right15 = 1) then
+return 1;
+fi
+else 
+if (left14 != right14) then
+if (right14 = 1) then
+return 1;
+fi
+else 
+if (left13 != right13) then
+if (right13 = 1) then
+return 1;
+fi
+else 
+if (left12 != right12) then
+if (right12 = 1) then
+return 1;
+fi
+else 
+if (left11 != right11) then
+if (right11 = 1) then
+return 1;
+fi
+else 
+if (left10 != right10) then
+if (right10 = 1) then
+return 1;
+fi
+else 
+if (left9 != right9) then
+if (right9 = 1) then
+return 1;
+fi
+else 
+if (left8 != right8) then
+if (right8 = 1) then
+return 1;
+fi
+else 
+if (left7 != right7) then
+if (right7 = 1) then
+return 1;
+fi
+else 
+if (left6 != right6) then
+if (right6 = 1) then
+return 1;
+fi
+else 
+if (left5 != right5) then
+if (right5 = 1) then
+return 1;
+fi
+else 
+if (left4 != right4) then
+if (right4 = 1) then
+return 1;
+fi
+else 
+if (left3 != right3) then
+if (right3 = 1) then
+return 1;
+fi
+else 
+if (left2 != right2) then
+if (right2 = 1) then
+return 1;
+fi
+else 
+if (left1 != right1) then
+if (right1 = 1) then
+return 1;
+fi
+else 
+if (left0 != right0) then
+if (right0 = 1) then
+return 1;
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+return 0;
+end
+
+bool isEqual(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+if (left32 = right32 & left31 = right31 & left30 = right30 & left29 = right29 & left28 = right28 & left27 = right27 & left26 = right26 & left25 = right25 & left24 = right24 & left23 = right23 & left22 = right22 & left21 = right21 & left20 = right20 & left19 = right19 & left18 = right18 & left17 = right17 & left16 = right16 & left15 = right15 & left14 = right14 & left13 = right13 & left12 = right12 & left11 = right11 & left10 = right10 & left9 = right9 & left8 = right8 & left7 = right7 & left6 = right6 & left5 = right5 & left4 = right4 & left3 = right3 & left2 = right2 & left1 = right1 & left0 = right0) then
+return 1;
+else 
+return 0;
+fi
+end
+
+bool isNotEqual(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+if (left32 != right32 | left31 != right31 | left30 != right30 | left29 != right29 | left28 != right28 | left27 != right27 | left26 != right26 | left25 != right25 | left24 != right24 | left23 != right23 | left22 != right22 | left21 != right21 | left20 != right20 | left19 != right19 | left18 != right18 | left17 != right17 | left16 != right16 | left15 != right15 | left14 != right14 | left13 != right13 | left12 != right12 | left11 != right11 | left10 != right10 | left9 != right9 | left8 != right8 | left7 != right7 | left6 != right6 | left5 != right5 | left4 != right4 | left3 != right3 | left2 != right2 | left1 != right1 | left0 != right0) then
+return 1;
+else 
+return 0;
+fi
+end
+
+bool isGTEQ(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+decl eq, gt;
+eq := isEqual (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+gt := isGT (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+return eq | gt;
+end
+
+bool isLTEQ(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+decl eq, lt;
+eq := isEqual (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+lt := isLT (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+return eq | lt;
+end
+
+bool<33> inc(x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0)
+begin
+if (x0 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,1;
+else 
+if (x1 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,1,0;
+else 
+if (x2 = 0) then
+return x32,x31,x30,1,0,0;
+else 
+if (x3 = 0) then
+return 1,0,0,0;
+else 
+if (x4 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,1,0,0,0,0;
+else 
+if (x5 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,1,0,0,0,0,0;
+else 
+if (x6 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,1,0,0,0,0,0,0;
+else 
+if (x7 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,1,0,0,0,0,0,0,0;
+else 
+if (x8 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,1,0,0,0,0,0,0,0,0;
+else 
+if (x9 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,1,0,0,0,0,0,0,0,0,0;
+else 
+if (x10 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,1,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x11 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,1,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x12 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,1,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x13 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,1,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x14 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x15 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x16 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x17 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x18 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x19 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x20 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x21 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x22 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x23 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x24 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,x25,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x25 = 0) then
+return x32,x31,x30,x29,x28,x27,x26,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x26 = 0) then
+return x32,x31,x30,x29,x28,x27,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x27 = 0) then
+return x32,x31,x30,x29,x28,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x28 = 0) then
+return x32,x31,x30,x29,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x29 = 0) then
+return x32,x31,x30,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x30 = 0) then
+return x32,x31,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+if (x31 = 0) then
+return x32,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+else 
+return 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+end
+
+bool<33> dec(x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,x0)
+begin
+if (x0 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,x4,x3,x2,x1,0;
+else 
+if (x1 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,0,1;
+else 
+if (x2 = 1) then
+return x32,x31,x30,0,1,1;
+else 
+if (x3 = 1) then
+return 0,1,1,1;
+else 
+if (x4 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,x5,0,1,1,1,1;
+else 
+if (x5 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,x6,0,1,1,1,1,1;
+else 
+if (x6 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,x7,0,1,1,1,1,1,1;
+else 
+if (x7 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,x8,0,1,1,1,1,1,1,1;
+else 
+if (x8 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,x9,0,1,1,1,1,1,1,1,1;
+else 
+if (x9 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,x10,0,1,1,1,1,1,1,1,1,1;
+else 
+if (x10 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,x11,0,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x11 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,x12,0,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x12 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,x13,0,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x13 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,x14,0,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x14 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,x15,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x15 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,x16,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x16 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,x17,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x17 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,x18,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x18 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,x19,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x19 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,x20,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x20 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,x21,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x21 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,x22,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x22 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,x23,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x23 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,x24,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x24 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,x25,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x25 = 1) then
+return x32,x31,x30,x29,x28,x27,x26,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x26 = 1) then
+return x32,x31,x30,x29,x28,x27,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x27 = 1) then
+return x32,x31,x30,x29,x28,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x28 = 1) then
+return x32,x31,x30,x29,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x29 = 1) then
+return x32,x31,x30,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x30 = 1) then
+return x32,x31,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+if (x31 = 1) then
+return x32,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+else 
+return 0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1;
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+end
+
+bool<33> plus(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+decl sum32,sum31,sum30,sum29,sum28,sum27,sum26,sum25,sum24,sum23,sum22,sum21,sum20,sum19,sum18,sum17,sum16,sum15,sum14,sum13,sum12,sum11,sum10,sum9,sum8,sum7,sum6,sum5,sum4,sum3,sum2,sum1,sum0;
+decl returnTemp;
+sum32,sum31,sum30,sum29,sum28,sum27,sum26,sum25,sum24,sum23,sum22,sum21,sum20,sum19,sum18,sum17,sum16,sum15,sum14,sum13,sum12,sum11,sum10,sum9,sum8,sum7,sum6,sum5,sum4,sum3,sum2,sum1,sum0 := xor (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0 := and (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+while (returnTemp) do
+carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0 := lShiftOne (carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0);
+left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0 := sum32,sum31,sum30,sum29,sum28,sum27,sum26,sum25,sum24,sum23,sum22,sum21,sum20,sum19,sum18,sum17,sum16,sum15,sum14,sum13,sum12,sum11,sum10,sum9,sum8,sum7,sum6,sum5,sum4,sum3,sum2,sum1,sum0;
+right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0 := carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0;
+sum32,sum31,sum30,sum29,sum28,sum27,sum26,sum25,sum24,sum23,sum22,sum21,sum20,sum19,sum18,sum17,sum16,sum15,sum14,sum13,sum12,sum11,sum10,sum9,sum8,sum7,sum6,sum5,sum4,sum3,sum2,sum1,sum0 := xor (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0 := and (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+returnTemp := isNotEqual (carry32,carry31,carry30,carry29,carry28,carry27,carry26,carry25,carry24,carry23,carry22,carry21,carry20,carry19,carry18,carry17,carry16,carry15,carry14,carry13,carry12,carry11,carry10,carry9,carry8,carry7,carry6,carry5,carry4,carry3,carry2,carry1,carry0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+od
+return sum32,sum31,sum30,sum29,sum28,sum27,sum26,sum25,sum24,sum23,sum22,sum21,sum20,sum19,sum18,sum17,sum16,sum15,sum14,sum13,sum12,sum11,sum10,sum9,sum8,sum7,sum6,sum5,sum4,sum3,sum2,sum1,sum0;
+end
+
+bool<33> minus(left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0)
+begin
+right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0 := oneComplement (right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0 := plus (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,right32,right31,right30,right29,right28,right27,right26,right25,right24,right23,right22,right21,right20,right19,right18,right17,right16,right15,right14,right13,right12,right11,right10,right9,right8,right7,right6,right5,right4,right3,right2,right1,right0);
+left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0 := plus (left32,left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+return 0,     left31,left30,left29,left28,left27,left26,left25,left24,left23,left22,left21,left20,left19,left18,left17,left16,left15,left14,left13,left12,left11,left10,left9,left8,left7,left6,left5,left4,left3,left2,left1,left0;
+end
+
+void main()
+begin
+decl returnTemp;
+decl S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0;
+decl O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0;
+decl SMax32,SMax31,SMax30,SMax29,SMax28,SMax27,SMax26,SMax25,SMax24,SMax23,SMax22,SMax21,SMax20,SMax19,SMax18,SMax17,SMax16,SMax15,SMax14,SMax13,SMax12,SMax11,SMax10,SMax9,SMax8,SMax7,SMax6,SMax5,SMax4,SMax3,SMax2,SMax1,SMax0;
+decl OMax32,OMax31,OMax30,OMax29,OMax28,OMax27,OMax26,OMax25,OMax24,OMax23,OMax22,OMax21,OMax20,OMax19,OMax18,OMax17,OMax16,OMax15,OMax14,OMax13,OMax12,OMax11,OMax10,OMax9,OMax8,OMax7,OMax6,OMax5,OMax4,OMax3,OMax2,OMax1,OMax0;
+decl STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0;
+decl OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0;
+decl OCounter32,OCounter31,OCounter30,OCounter29,OCounter28,OCounter27,OCounter26,OCounter25,OCounter24,OCounter23,OCounter22,OCounter21,OCounter20,OCounter19,OCounter18,OCounter17,OCounter16,OCounter15,OCounter14,OCounter13,OCounter12,OCounter11,OCounter10,OCounter9,OCounter8,OCounter7,OCounter6,OCounter5,OCounter4,OCounter3,OCounter2,OCounter1,OCounter0;
+returnTemp := 0;
+S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+SMax32,SMax31,SMax30,SMax29,SMax28,SMax27,SMax26,SMax25,SMax24,SMax23,SMax22,SMax21,SMax20,SMax19,SMax18,SMax17,SMax16,SMax15,SMax14,SMax13,SMax12,SMax11,SMax10,SMax9,SMax8,SMax7,SMax6,SMax5,SMax4,SMax3,SMax2,SMax1,SMax0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0;
+OMax32,OMax31,OMax30,OMax29,OMax28,OMax27,OMax26,OMax25,OMax24,OMax23,OMax22,OMax21,OMax20,OMax19,OMax18,OMax17,OMax16,OMax15,OMax14,OMax13,OMax12,OMax11,OMax10,OMax9,OMax8,OMax7,OMax6,OMax5,OMax4,OMax3,OMax2,OMax1,OMax0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0;
+STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+OCounter32,OCounter31,OCounter30,OCounter29,OCounter28,OCounter27,OCounter26,OCounter25,OCounter24,OCounter23,OCounter22,OCounter21,OCounter20,OCounter19,OCounter18,OCounter17,OCounter16,OCounter15,OCounter14,OCounter13,OCounter12,OCounter11,OCounter10,OCounter9,OCounter8,OCounter7,OCounter6,OCounter5,OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+returnTemp := isNotEqual(O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0,OMax32,OMax31,OMax30,OMax29,OMax28,OMax27,OMax26,OMax25,OMax24,OMax23,OMax22,OMax21,OMax20,OMax19,OMax18,OMax17,OMax16,OMax15,OMax14,OMax13,OMax12,OMax11,OMax10,OMax9,OMax8,OMax7,OMax6,OMax5,OMax4,OMax3,OMax2,OMax1,OMax0);
+while (returnTemp) do
+S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+returnTemp := isNotEqual(S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0,SMax32,SMax31,SMax30,SMax29,SMax28,SMax27,SMax26,SMax25,SMax24,SMax23,SMax22,SMax21,SMax20,SMax19,SMax18,SMax17,SMax16,SMax15,SMax14,SMax13,SMax12,SMax11,SMax10,SMax9,SMax8,SMax7,SMax6,SMax5,SMax4,SMax3,SMax2,SMax1,SMax0);
+while (returnTemp) do
+OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0;
+STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0 := S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0;
+returnTemp := isGTEQ(STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1);
+while (returnTemp) do
+STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0 := minus(STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1);
+OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0 := plus(OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+returnTemp := isGTEQ(STemp32,STemp31,STemp30,STemp29,STemp28,STemp27,STemp26,STemp25,STemp24,STemp23,STemp22,STemp21,STemp20,STemp19,STemp18,STemp17,STemp16,STemp15,STemp14,STemp13,STemp12,STemp11,STemp10,STemp9,STemp8,STemp7,STemp6,STemp5,STemp4,STemp3,STemp2,STemp1,STemp0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1);
+od
+returnTemp := isEqual(O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0,OTemp32,OTemp31,OTemp30,OTemp29,OTemp28,OTemp27,OTemp26,OTemp25,OTemp24,OTemp23,OTemp22,OTemp21,OTemp20,OTemp19,OTemp18,OTemp17,OTemp16,OTemp15,OTemp14,OTemp13,OTemp12,OTemp11,OTemp10,OTemp9,OTemp8,OTemp7,OTemp6,OTemp5,OTemp4,OTemp3,OTemp2,OTemp1,OTemp0);
+if (returnTemp) then
+OCounter32,OCounter31,OCounter30,OCounter29,OCounter28,OCounter27,OCounter26,OCounter25,OCounter24,OCounter23,OCounter22,OCounter21,OCounter20,OCounter19,OCounter18,OCounter17,OCounter16,OCounter15,OCounter14,OCounter13,OCounter12,OCounter11,OCounter10,OCounter9,OCounter8,OCounter7,OCounter6,OCounter5,OCounter4,OCounter3,OCounter2,OCounter1,OCounter0 := plus(OCounter32,OCounter31,OCounter30,OCounter29,OCounter28,OCounter27,OCounter26,OCounter25,OCounter24,OCounter23,OCounter22,OCounter21,OCounter20,OCounter19,OCounter18,OCounter17,OCounter16,OCounter15,OCounter14,OCounter13,OCounter12,OCounter11,OCounter10,OCounter9,OCounter8,OCounter7,OCounter6,OCounter5,OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+goto break;
+fi
+S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0 := plus(S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+returnTemp := isNotEqual(S32,S31,S30,S29,S28,S27,S26,S25,S24,S23,S22,S21,S20,S19,S18,S17,S16,S15,S14,S13,S12,S11,S10,S9,S8,S7,S6,S5,S4,S3,S2,S1,S0,SMax32,SMax31,SMax30,SMax29,SMax28,SMax27,SMax26,SMax25,SMax24,SMax23,SMax22,SMax21,SMax20,SMax19,SMax18,SMax17,SMax16,SMax15,SMax14,SMax13,SMax12,SMax11,SMax10,SMax9,SMax8,SMax7,SMax6,SMax5,SMax4,SMax3,SMax2,SMax1,SMax0);
+od
+break: O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0 := plus(O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+returnTemp := isNotEqual(O32,O31,O30,O29,O28,O27,O26,O25,O24,O23,O22,O21,O20,O19,O18,O17,O16,O15,O14,O13,O12,O11,O10,O9,O8,O7,O6,O5,O4,O3,O2,O1,O0,OMax32,OMax31,OMax30,OMax29,OMax28,OMax27,OMax26,OMax25,OMax24,OMax23,OMax22,OMax21,OMax20,OMax19,OMax18,OMax17,OMax16,OMax15,OMax14,OMax13,OMax12,OMax11,OMax10,OMax9,OMax8,OMax7,OMax6,OMax5,OMax4,OMax3,OMax2,OMax1,OMax0);
+od
+returnTemp := isEqual(OCounter32,OCounter31,OCounter30,OCounter29,OCounter28,OCounter27,OCounter26,OCounter25,OCounter24,OCounter23,OCounter22,OCounter21,OCounter20,OCounter19,OCounter18,OCounter17,OCounter16,OCounter15,OCounter14,OCounter13,OCounter12,OCounter11,OCounter10,OCounter9,OCounter8,OCounter7,OCounter6,OCounter5,OCounter4,OCounter3,OCounter2,OCounter1,OCounter0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0);
+if (returnTemp) then
+reach: isGT(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1);
+fi
+end
