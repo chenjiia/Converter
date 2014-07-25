@@ -35,15 +35,6 @@ int main(int argc, char** argv) {
             if (yyin != stdin) fclose(yyin);
             exit(EXIT_FAILURE);
       }
-	  //id_print("SMax", 4);
-
-      /* Build the global environment, do typechecking. */	  
-	  //decls_print(ast_root);
-
-	  // create_global_env();
-	  // type_check_decls(ast_root, gEnv, NULL);
-	  // decls_print(ast_root);
-	  //env_print(gEnv);
 	  
 	  //manually add main fx
 	  printf("void main()\n");
