@@ -1,3 +1,5 @@
+//bit length 7
+
 var S = 0;
 var O = 0;
 

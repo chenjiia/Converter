@@ -1,4 +1,5 @@
-//BDD: longbman
+//bit length 8
+
 var S = 0;
 var O = 0;
 

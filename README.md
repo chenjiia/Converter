@@ -15,6 +15,10 @@ in the root directory.
 <h2>How to run</h2>
 ./run.sh input_file_name bit_length
 
+Like
+
+./run.sh ./tests/4.1sanityCheck/ztest.txt 7
+
 <h2>Where are the examples</h2>
 ./tests
 
