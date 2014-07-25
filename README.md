@@ -7,3 +7,9 @@ make
 in the root directory.
 
 <h2>How to run</h2>
+./run.sh input_file_name bit_length
+
+<h2>Where are the examples</h2>
+./tests
+
+Jia Chen, 2014

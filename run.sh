@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Generate builtin functions."
+echo "Generate built-in functions."
 ./fxGen/fxGen $2 &> "fxGen.out"
 
 echo "Append parsed statements."
