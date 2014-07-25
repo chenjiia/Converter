@@ -1,6 +1,10 @@
 <h1>Converter for Getafix</h1>
 The Converter is a tool that translates C-style code into boolean programs. Specifically the style required by Getafix.
 
+Link to Getafix:
+
+http://www.cs.uiuc.edu/~madhu/getafix/ 
+
 <h2>Dependency</h2>
 flex
 bison
