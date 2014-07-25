@@ -19,9 +19,13 @@ in the root directory.
 <h2>How to run</h2>
 ./run.sh input_file_name bit_length
 
+The output is in input_file_name.bp
+
 Like
 
 ./run.sh ./tests/4.1sanityCheck/ztest.txt 7
+
+and output is ./tests/4.1sanityCheck/ztest.txt.bp
 
 <h2>Where are the examples</h2>
 ./tests
